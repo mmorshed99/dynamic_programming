@@ -16,7 +16,7 @@ class Solution:
     # @return an integer
     def numDecodings(self, A):
         n = len(A)
-        ###count and A don't have same index base (0 vs 1)
+        ###count and A don't have same index base (1 vs 0)
         count = [0] * (n+1) 
         count[0] = 1
         count[1] = 1
