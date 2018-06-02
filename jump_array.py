@@ -23,6 +23,8 @@ def minJumps(arr, n):
 
  for i in range(1,n):
 	# Check if we have reached the end of the array
+	#print(i)
+	
 	if (i == n-1):
 	 return jump
 
@@ -37,20 +39,19 @@ def minJumps(arr, n):
 	 # we must have used a jump
 	 jump += 1
 	
-	# Check if the current index/position or lesser index
-	# is the maximum reach point from the previous indexes
-	if(i >= maxReach):
+	 # Check if the current index/position or lesser index
+	 # is the maximum reach point from the previous indexes
+	 if(i >= maxReach):
 		return -1
-
-	# re-initialize the steps to the amount
-	# of steps to reach maxReach from position i.
-	step = maxReach - i;
+	 # re-initialize the steps to the amount
+	 # of steps to reach maxReach from position i.
+	 step = maxReach - i;
  return -1
 
 
 # Driver program to test above function
 arr = [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]
-#arr = [2,3,1,1,4]
+arr = [2,3,1,1,4]
 size = len(arr)
 
 # Calling the minJumps function
