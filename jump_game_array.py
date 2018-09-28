@@ -31,3 +31,11 @@ class Solution:
                destin = j
            j = j-1
         return save[0]
+    def canJump1(self, A):
+        dest = len(A)-1
+        for idx in reversed(range(len(A)-1)):
+            if A[idx] >= dest - idx:
+                dest = idx
+        if dest == 0:
+            return 1
+        return 0
